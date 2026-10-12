@@ -103,7 +103,7 @@ export default function AIAssistantPanel({
 
       <div className="min-h-0 flex-1 overflow-y-auto p-3">
         {pageMissing ? (
-          <p className="text-sm text-ink-soft">Select a page, or switch to "Whole project".</p>
+          <p className="text-sm text-ink-soft">Select a page, or switch to &quot;Whole project&quot;.</p>
         ) : (
           // Tabs stay mounted (hidden) so chat history, quiz progress and cards survive tab switches.
           <>
