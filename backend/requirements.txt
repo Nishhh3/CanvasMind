@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+pydantic-settings
+python-dotenv
+python-multipart
+httpx
+pymupdf 
+python-pptx 
+python-docx 
+numpy
+psycopg[binary]

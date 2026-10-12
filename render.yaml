@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: learning-canvas-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: DATABASE_URL        # Supabase pooler URL (set it in the Render dashboard)
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        sync: false
+      - key: VISION_MODEL
+        value: google/gemini-2.5-flash
+      - key: CORS_ORIGINS        # e.g. https://your-app.vercel.app
+        sync: false
